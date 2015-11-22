@@ -1,28 +1,28 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-int main(){// Definição das variaveis a ser utilizada no programa. 
+int main(){
     int qntcasos, c, d, cont = 0;
     char valora[1000], valorb[1000];
-    scanf("%d", &qntcasos);//Declarando a veariavel em que o programa irá receber
-    for(c = 0; c < qntcasos; c++){// De acordo com o numero que o usuario digitar vai ser a quantidade de vezes que ele podera informar numeros para saber se o numero vai emcaixar ou não.
+    scanf("%d", &qntcasos);
+    for(c = 0; c < qntcasos; c++){
         scanf("%s%s", valora, valorb);
-        if(strlen(valorb) > strlen(valora)){//Comando de decisão caso o valor B for maior que o valor A sera exebido que o numero não encaixa. 
+        if(strlen(valorb) > strlen(valora)){
             printf("nao encaixa\n");
             continue;
         }  
-        if(strcmp(valora, valorb) == 0){//Comando de decisão caso o valor A e B for igual a zero sera exebido que o numero encaixa. 
+        if(strcmp(valora, valorb) == 0)
             printf("encaixa\n");
             continue;
         }
-        for(d = 0; d < strlen(valorb); d++){// Comando de decisão comparando os numeros, caso preciso sera somado mais 1 ou -1.
+        for(d = 0; d < strlen(valorb); d++){
             if(valora[strlen(valora) - strlen(valorb) + d] == valorb[d])
                cont++;              
             else{
                 cont = -1;break;
             }
         }
-        printf("%s\n", cont ==-1? "nao encaixa" : "encaixa");//Apresenta na tela o resultado dos numeros informado pelo usuario se encaixa ou não.  
+        printf("%s\n", cont ==-1? "nao encaixa" : "encaixa"); 
     }
      return 0;
 }
