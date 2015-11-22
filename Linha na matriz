@@ -1,0 +1,35 @@
+#include <stdio.h>
+
+int main(){
+    int numero, coluna, linha;
+    double matriz[12][12], soma = 0, media = 0;
+    char operacao;
+
+    scanf("%d", &numero);
+    scanf(" %c", &operacao);
+    if(numero < 0 || numero > 11){
+    printf("0.0\n");
+    }
+    else{
+    for(linha = 0; linha <= 11; linha++){
+        for(coluna = 0; coluna <= 11; coluna++){
+            scanf("%lf", &matriz[linha][coluna]);
+            if(linha == numero){
+                if(operacao == 'S'){
+                soma = soma + matriz[linha][coluna];
+                }
+                else if(operacao == 'M'){
+                media = media + matriz[linha][coluna];
+                }
+            }
+        }
+    }
+    media = media / 12;
+    if(operacao == 'S'){
+    printf("%.1lf\n", soma);
+    }
+    else if(operacao == 'M'){
+    printf("%.1lf\n", media);
+    }
+    }
+}
