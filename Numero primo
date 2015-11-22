@@ -1,0 +1,22 @@
+#include <stdio.h>
+int main(){	
+		int numero, numerosprimo, c=0, d=0, e;
+		scanf("%d", &numero);
+		if(1 <= numero   && numero < 101){
+		for(c = 0; c < numero; c++){
+		scanf("%d", &numerosprimo);
+		if(1 < numerosprimo && numerosprimo <= 1000000){
+			for(e = numerosprimo-1; e > 1; e--){
+			if(numerosprimo%e==0)
+			d++;
+	 	}
+	 	if(d!=0)
+	 	printf("%d nao eh primo\n", numerosprimo);
+	 	else
+	 	printf("%d eh primo\n", numerosprimo);
+	 	d=0;
+		}
+		}
+		}
+	return 0;
+}
