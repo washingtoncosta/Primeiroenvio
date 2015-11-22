@@ -1,0 +1,16 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+main(){
+	
+	int tabuada,x;
+	
+	printf("Digite um numero inteiro para exibir a respectiva tabuada: ");
+	scanf("%d", &tabuada);
+	
+	for (x=1; x<=10; x++){
+		printf("%d x %d = %d\n", tabuada, x , tabuada * x);	
+	}
+	
+	system("pause");
+}
