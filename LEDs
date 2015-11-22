@@ -2,13 +2,13 @@
 #include <stdlib.h>
 #include <string.h>
 int main(){
-	int numero, soma = 0, a, b; // Definição das variaveis a ser utilizada no programa. 
+	int numero, soma = 0, a, b; 
 	char vetor[10000];
-	scanf("%d", &numero);//Declarando a veariavel em que o programa irá receber
-	for(a = 0; a < numero; a++){// De acordo com o numero que o usuario digitar vai ser a quantidade de vezes que ele podera informar para saber quantos leds vai precisar para formar o numero. 
+	scanf("%d", &numero);
+	for(a = 0; a < numero; a++){ 
 	    scanf("%s", vetor);
 		for(b = 0; b < strlen(vetor) ; b++){
-		switch(vetor[b]){// De acordo com o numero que foi digitado vai sendo somado quantos Leds precisa para formar o numero informado. 
+		switch(vetor[b]){
 			case '0': soma = soma + 6; 
 			break;
 			case '1': soma = soma + 2;
@@ -31,7 +31,7 @@ int main(){
 			break;
 			}	
 			}
-			printf("%d leds\n", soma);// Apresenta na tela a quantidade de Leds que precisa para formar o numero escolhido pelo usuario. 
+			printf("%d leds\n", soma);
 			soma = 0;
 	}
 	system("pause");
