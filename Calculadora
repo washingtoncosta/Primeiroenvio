@@ -1,0 +1,52 @@
+#include<stdio.h>
+#include<stdlib.h>
+
+float adicao (float a1, float b2){
+      return(a1+b2);
+      }
+float subtracao (float a1, float b2){
+      return(a1-b2);
+      }
+float multiplicacao (float a1, float b2){
+      return(a1*b2);
+      }
+float divisao (float a1, float b2){
+      return(a1/b2);
+      }
+      
+
+main(){
+
+       float a1, b2, r;
+       int d;
+       printf("Informe dois numeros\n");
+       scanf("%f%f", &a1, &b2);
+       printf("\t === Calculadora === \n\n");
+       printf("Escolha uma opcao\n");
+       printf("[1] - Adicao\n[2] - Subtracao\n[3] - Multiplicacao\n[4] - Divisao\n");
+       scanf("%d", &d);
+       switch(d){
+          case 1 : printf("\t === Adicao === \n");
+                   r=adicao(a1,b2);
+                   printf("%.2f\n",r);
+                   break;  
+          case 2 : printf("\t === Subtracao === \n");
+                   r=subtracao(a1,b2);
+                   printf("%.2f\n",r);
+                   break; 
+          case 3:  printf("\t === Multiplicacao === \n");
+                   r=multiplicacao(a1,b2);
+                   printf("%.2f\n",r);
+                   break; 
+          case 4 : printf("\t === Divisao === \n");
+                   if(b2==0)
+                   printf("Divisao por zero!!\n");
+                   else{ 
+	               r=divisao(a1,b2);
+                   printf("%.2f\n",r);
+                   break; 
+          default : printf("Opcao invalida\n");
+         }
+         }
+  		 system("pause");
+       }
