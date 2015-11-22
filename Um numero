@@ -1,0 +1,9 @@
+#include<stdio.h>
+#include<stdlib.h>
+main(){
+	float a;
+	printf("Digite um numero :", a);
+	scanf("%f", &a);
+	printf("Seu numero = %.10f\n", a);
+	system("pause");
+}
