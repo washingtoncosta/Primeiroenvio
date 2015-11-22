@@ -1,0 +1,23 @@
+#include <stdio.h>
+#include <math.h>
+#include <stdlib.h>
+       int valor_soma;
+       int somar(int n1, int n2, int n3){
+           return(n1+n2+n3);
+           }
+main(){
+       int a, b, c;
+      
+       printf("Informe tres numeros\n");
+       scanf("%d%d%d", &a, &b, &c);
+       valor_soma=somar(a,b,c);
+       if(valor_soma%2==0)
+       printf("A soma eh par\n");
+       
+       else
+       printf("A soma eh impar\n");
+       
+       system("pause");
+       
+       }
+
